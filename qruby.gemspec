@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.version       = QRuby::VERSION
   s.date          = '2017-10-05'
   s.summary       = 'simple sql query builder library for Ruby.'
-  s.description   = 'simple sql query builder library for Ruby.'
+  s.description   = 'QRuby: simple sql query builder library for Ruby.'
   s.authors       = ['İzni Burak Demirtaş']
   s.email         = ['info@burakdemirtas.org']
   s.homepage      = 'https://github.com/izniburak/qruby'
@@ -17,5 +17,7 @@ Gem::Specification.new do |s|
   s.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec)/}) }
   s.require_paths = ['lib']
 
-  s.add_development_dependency 'rspec'
+  s.add_development_dependency 'bundler', '~> 1.15'
+  s.add_development_dependency 'rake', '~> 10.0'
+  s.add_development_dependency 'rspec', '~> 3.0'
 end
