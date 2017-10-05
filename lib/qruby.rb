@@ -91,7 +91,7 @@ module QRuby
     end
 
     ["or", "not", "or_not"].map.with_index do |method, i|
-      define_method "#{method}_like" do |field, value1, value2|
+      define_method "#{method}_like" do |field, value|
         like field, value, (i > 0 ? "NOT " : ""), (i == 1 ? "AND" : "OR")
       end
     end
